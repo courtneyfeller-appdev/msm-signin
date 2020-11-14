@@ -1,5 +1,20 @@
 Rails.application.routes.draw do
 
+  # Routes for the Homepage:
+     
+  # READ
+  get("/", { :controller => "application", :action => "index" })
+  
+    
+  # UPDATE
+  
+  post("/modify_actor/:path_id", { :controller => "actors", :action => "update" })
+  
+  # DELETE
+  get("/delete_actor/:path_id", { :controller => "actors", :action => "destroy" })
+
+  #------------------------------
+
   # Routes for the User account:
 
   # SIGN UP FORM
